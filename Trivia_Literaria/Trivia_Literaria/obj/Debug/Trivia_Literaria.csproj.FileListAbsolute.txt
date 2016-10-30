@@ -17,3 +17,6 @@ C:\Users\Oswaldo\Documents\Visual Studio 2012\Projects\Trivia_Literaria\Trivia_L
 C:\Users\Oswaldo\Documents\Visual Studio 2012\Projects\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmRobo.resources
 C:\Users\Oswaldo\Documents\Visual Studio 2012\Projects\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.csproj.GenerateResource.Cache
 C:\Users\Oswaldo\Documents\Visual Studio 2012\Projects\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmScore.resources
+C:\Users\Oswaldo\Desktop\Trivia Literaria\Trivia_Literaria\Trivia_Literaria\bin\Debug\Trivia_Literaria.exe.config
+C:\Users\Oswaldo\Desktop\Trivia Literaria\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.exe
+C:\Users\Oswaldo\Desktop\Trivia Literaria\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.pdb
