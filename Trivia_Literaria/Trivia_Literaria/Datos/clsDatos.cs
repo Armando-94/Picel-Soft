@@ -139,8 +139,8 @@ namespace Trivia_Literaria.Datos
         }
 
         public string[] Preguntas(char trivia) {
-            string sql,pregunta,respuesta;
-            int min, max,id;
+            string sql,pregunta,respuesta,libro;
+            int min, max,id,id_Libro;
             Random rnd = new Random();
             string[] arr= new string[8];
             MySqlCommand com;
@@ -193,7 +193,17 @@ namespace Trivia_Literaria.Datos
                     com.CommandType = CommandType.Text;
                     com.Connection = cConexion;
                     respuesta = com.ExecuteScalar().ToString();
-                    arr[i - 1] = pregunta + ";" + respuesta;
+                    sql = "SELECT Libros_idLibros FROM PREGUNTAS WHERE idpreguntas = " + id;
+                    com.CommandText = sql;
+                    com.CommandType = CommandType.Text;
+                    com.Connection = cConexion;
+                    id_Libro = Int16.Parse(com.ExecuteScalar().ToString());
+                    sql = "select nombre from libros where idlibro = " + id_Libro;
+                    com.CommandText = sql;
+                    com.CommandType = CommandType.Text;
+                    com.Connection = cConexion;
+                    libro = com.ExecuteScalar().ToString();
+                    arr[i - 1] = "Libro: " + libro + "\t" + "Id: " + id + "\r\n\r\n" + pregunta + ";" + respuesta;
                 }
             }
             else
@@ -244,7 +254,17 @@ namespace Trivia_Literaria.Datos
                     com.CommandType = CommandType.Text;
                     com.Connection = cConexion;
                     respuesta = com.ExecuteScalar().ToString();
-                    arr[i - 1] = pregunta + ";" + respuesta;
+                    sql = "SELECT Libros_idLibros FROM PREGUNTAS WHERE idpreguntas = " + id;
+                    com.CommandText = sql;
+                    com.CommandType = CommandType.Text;
+                    com.Connection = cConexion;
+                    id_Libro = Int16.Parse(com.ExecuteScalar().ToString());
+                    sql = "select nombre from libros where idlibro = " + id_Libro;
+                    com.CommandText = sql;
+                    com.CommandType = CommandType.Text;
+                    com.Connection = cConexion;
+                    libro = com.ExecuteScalar().ToString();
+                    arr[i - 1] = "Libro: " + libro + "\t" + "Id: " + id + "\r\n\r\n" + pregunta + ";" + respuesta;
                 }
             }
             Cerrar();
@@ -252,8 +272,8 @@ namespace Trivia_Literaria.Datos
         }
 
         public string Extra(char trivia) {
-            string sql, pregunta, respuesta, ex;
-            int min, max, id;
+            string sql, pregunta, respuesta, ex,libr;
+            int min, max, id, id_Libro;
             Random rnd = new Random();
             MySqlCommand com;
             Conectar();
@@ -305,7 +325,17 @@ namespace Trivia_Literaria.Datos
                 com.CommandType = CommandType.Text;
                 com.Connection = cConexion;
                 respuesta = com.ExecuteScalar().ToString();
-                ex = pregunta + ";" + respuesta;
+                sql = "SELECT Libros_idLibros FROM PREGUNTAS WHERE idpreguntas = " + id;
+                com.CommandText = sql;
+                com.CommandType = CommandType.Text;
+                com.Connection = cConexion;
+                id_Libro = Int16.Parse(com.ExecuteScalar().ToString());
+                sql = "select nombre from libros where idlibro = " + id_Libro;
+                com.CommandText = sql;
+                com.CommandType = CommandType.Text;
+                com.Connection = cConexion;
+                libr = com.ExecuteScalar().ToString();
+                ex = "Libro: " + libr + "\t" + "Id: " + id + "\r\n\r\n" + pregunta + ";" + respuesta;
             }
             else
             {
@@ -353,19 +383,29 @@ namespace Trivia_Literaria.Datos
                 com.CommandType = CommandType.Text;
                 com.Connection = cConexion;
                 respuesta = com.ExecuteScalar().ToString();
-                ex = pregunta + ";" + respuesta;
+                sql = "SELECT Libros_idLibros FROM PREGUNTAS WHERE idpreguntas = " + id;
+                com.CommandText = sql;
+                com.CommandType = CommandType.Text;
+                com.Connection = cConexion;
+                id_Libro = Int16.Parse(com.ExecuteScalar().ToString());
+                sql = "select nombre from libros where idlibro = " + id_Libro;
+                com.CommandText = sql;
+                com.CommandType = CommandType.Text;
+                com.Connection = cConexion;
+                libr = com.ExecuteScalar().ToString();
+                ex = "Libro: " + libr + "\t" + "Id: " + id + "\r\n\r\n" + pregunta + ";" + respuesta;
             }
             Cerrar();
             return ex;
         }
 
-        public void Usada(string pregunta) {
+        public void Usada(string respuesta) {
             string sql;
             MySqlCommand com;
             Conectar();
             com = new MySqlCommand();
-            com.Parameters.AddWithValue("@pregunta", pregunta);
-            sql = "UPDATE `triviaad2016`.`preguntas` SET `Utilizada`='1' WHERE pregunta = @pregunta";
+            com.Parameters.AddWithValue("@respuesta", respuesta);
+            sql = "UPDATE `triviaad2016`.`preguntas` SET `Utilizada`='1' WHERE respuesta = @respuesta";
             com.CommandText = sql;
             com.CommandType = CommandType.Text;
             com.Connection = cConexion;

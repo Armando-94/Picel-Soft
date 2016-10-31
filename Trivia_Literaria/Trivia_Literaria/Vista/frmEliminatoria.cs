@@ -155,7 +155,7 @@ namespace Trivia_Literaria.Vista
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
             p = 0;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(preguntas[0]);
+            objDatos.Usada(respuestas[0]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
@@ -171,7 +171,7 @@ namespace Trivia_Literaria.Vista
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
             p = 1;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(preguntas[1]);
+            objDatos.Usada(respuestas[1]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
@@ -187,7 +187,7 @@ namespace Trivia_Literaria.Vista
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
             p = 2;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(preguntas[2]);
+            objDatos.Usada(respuestas[2]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
@@ -203,7 +203,7 @@ namespace Trivia_Literaria.Vista
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
             p = 3;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(preguntas[3]);
+            objDatos.Usada(respuestas[3]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
@@ -219,7 +219,7 @@ namespace Trivia_Literaria.Vista
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
             p = 4;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(preguntas[4]);
+            objDatos.Usada(respuestas[4]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
@@ -235,7 +235,7 @@ namespace Trivia_Literaria.Vista
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
             p = 5;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(preguntas[5]);
+            objDatos.Usada(respuestas[5]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
@@ -251,7 +251,7 @@ namespace Trivia_Literaria.Vista
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
             p = 6;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(preguntas[6]);
+            objDatos.Usada(respuestas[6]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
@@ -267,7 +267,7 @@ namespace Trivia_Literaria.Vista
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
             p = 7;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(preguntas[7]);
+            objDatos.Usada(respuestas[7]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
