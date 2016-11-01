@@ -45,7 +45,7 @@ namespace Trivia_Literaria.Vista
             }
             cmbEquipos.Text="Equipos";
             lblSegundos.ForeColor = Color.Black;
-            seg = 0;
+            seg = 3;
         }
 
         //Incorrecto
@@ -76,35 +76,52 @@ namespace Trivia_Literaria.Vista
 
         private void tmTemporizador_Tick(object sender, EventArgs e)
         {
-            seg++;
-            if (seg < 15)
+            if (seg > 1)
             {
-                lblSegundos.Text = "" + seg;
-                if (seg == 10) sonido.Play();
-                if (seg > 10)
-                {
-                    lblSegundos.ForeColor = Color.Red;
-                    sonido.Play();
-                }
+                lblConteoRegresivo.Text=""+seg;
+                seg--;
+                lblConteoRegresivo.Text = "" + seg;
             }
-            else {
+            else if(seg==1){
+                txtPregunta.Visible = true;
+                lblEquipo.Visible = true;
+                lblSegundos.Visible = true;
+                lblTime.Visible = true;
+                cmbEquipos.Visible = true;
+                lblConteoRegresivo.Visible = false;
                 tmTemporizador.Enabled = false;
-                lblSegundos.Text = "OVER";
-                btnCorrecto.Visible = false;
-                btnIncorrecto.Visible = false;
-                btnRegresar.Visible = true;
-                txtPregunta.Text = pregunta + "\r\n\r\n" + respuesta;
-                btnRegresar.Focus();
-                equi = cmbEquipos.SelectedItem.ToString();
-                for (int eq = 0; eq < equipos.Length; eq++)
+            }else {
+                seg++;
+                if (seg < 15)
                 {
-                    if (equi.Equals(equipos[eq]))
+                    lblSegundos.Text = "" + seg;
+                    if (seg == 10) sonido.Play();
+                    if (seg > 10)
                     {
-                        index = eq;
-                        break;
+                        lblSegundos.ForeColor = Color.Red;
+                        sonido.Play();
                     }
                 }
-                puntos = -1;
+                else
+                {
+                    tmTemporizador.Enabled = false;
+                    lblSegundos.Text = "OVER";
+                    btnCorrecto.Visible = false;
+                    btnIncorrecto.Visible = false;
+                    btnRegresar.Visible = true;
+                    txtPregunta.Text = pregunta + "\r\n\r\n" + respuesta;
+                    btnRegresar.Focus();
+                    equi = cmbEquipos.SelectedItem.ToString();
+                    for (int eq = 0; eq < equipos.Length; eq++)
+                    {
+                        if (equi.Equals(equipos[eq]))
+                        {
+                            index = eq;
+                            break;
+                        }
+                    }
+                    puntos = -1;
+                }
             }
         }
 

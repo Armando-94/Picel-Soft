@@ -469,11 +469,13 @@ namespace Trivia_Literaria.Vista
 
         private void btnRobo_Click(object sender, EventArgs e)
         {
+            Datos.clsDatos objDatos = new Datos.clsDatos();
             string equipo = equipos[j];
             Vista.frmRobo objR = new frmRobo(preguntas[p],respuestas[p],equipos,equipo);
             this.Hide();
             objR.ShowDialog();
             score[objR.index] += objR.puntos;
+            objDatos.ActualizarScore(equipos[objR.index], score[objR.index]);
             this.Show();
             btnRobo.Visible = false;
             btnIncorrecto.Visible = false;
@@ -501,7 +503,6 @@ namespace Trivia_Literaria.Vista
             }
             else
             {
-                Datos.clsDatos objDatos = new Datos.clsDatos();
                 char d = ';';
                 string extra;
                 string[] arr;
