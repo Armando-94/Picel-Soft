@@ -8,7 +8,8 @@ insert into equipos (Nombre,ScoreFinal,NoParticipantes) values
 ('2^2+1',0,5),
 ('THE CORE',0,5),
 ('CDS-SILVER',0,5),
-('REMEDIAL SQUAD',0,5);
+('REMEDIAL SQUAD',0,5),
+('LITERATOS',0,5);
 
 Insert into libros (nombre,Genero,Autor) values
 ('La chica del Tren','Novela','Paula'),
@@ -65,4 +66,9 @@ Insert into participantes (id_participante,id_equipo,Nombre) values
 (2,9,'Miguel Angel Ortiz Villicaña'),
 (3,9,'Viridiana Lopez Lopez'),
 (4,9,'Karla Yazmin Garcia Perez'),
-(5,9,'Francisco Javier Tinoco Hurtado');
+(5,9,'Francisco Javier Tinoco Hurtado'),
+(1,10,'Oscar Oswaldo Valencia Zamudio'),
+(2,10,'María Ivette Paniagua Juárez'),
+(3,10,'Karina Alejandra Baeza'),
+(4,10,'Enrrique León Espinoza'),
+(5,10,'Juan Marcos Custodio Castro');
