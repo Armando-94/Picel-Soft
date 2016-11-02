@@ -543,7 +543,7 @@ namespace Trivia_Literaria.Vista
                   Si la ronda es <= 9 (10 rondas) iniciamos los equipos a 0
                   Sino acabamos la trivia*/
                 i++;
-                if (i < 5)
+                if (i < 10)
                 {
                     j = 0;
                     mtdVerBotones();

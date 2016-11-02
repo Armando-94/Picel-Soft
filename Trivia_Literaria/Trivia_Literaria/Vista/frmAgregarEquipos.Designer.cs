@@ -82,20 +82,20 @@
             this.cmbTrivia.Items.AddRange(new object[] {
             "Trivia A",
             "Trivia B"});
-            this.cmbTrivia.Location = new System.Drawing.Point(164, 5);
+            this.cmbTrivia.Location = new System.Drawing.Point(177, 3);
             this.cmbTrivia.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTrivia.Name = "cmbTrivia";
-            this.cmbTrivia.Size = new System.Drawing.Size(180, 26);
+            this.cmbTrivia.Size = new System.Drawing.Size(268, 26);
             this.cmbTrivia.TabIndex = 3;
             this.cmbTrivia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTrivia_KeyPress);
             // 
             // txtEquipo
             // 
             this.txtEquipo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEquipo.Location = new System.Drawing.Point(164, 42);
+            this.txtEquipo.Location = new System.Drawing.Point(177, 40);
             this.txtEquipo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipo.Name = "txtEquipo";
-            this.txtEquipo.Size = new System.Drawing.Size(148, 25);
+            this.txtEquipo.Size = new System.Drawing.Size(268, 25);
             this.txtEquipo.TabIndex = 8;
             // 
             // lblEquipo
@@ -112,10 +112,10 @@
             // txtIntegrantes
             // 
             this.txtIntegrantes.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIntegrantes.Location = new System.Drawing.Point(164, 81);
+            this.txtIntegrantes.Location = new System.Drawing.Point(176, 82);
             this.txtIntegrantes.Margin = new System.Windows.Forms.Padding(4);
             this.txtIntegrantes.Name = "txtIntegrantes";
-            this.txtIntegrantes.Size = new System.Drawing.Size(148, 25);
+            this.txtIntegrantes.Size = new System.Drawing.Size(41, 25);
             this.txtIntegrantes.TabIndex = 13;
             this.txtIntegrantes.TextChanged += new System.EventHandler(this.txtIntegrantes_TextChanged);
             this.txtIntegrantes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIntegrantes_KeyPress);
@@ -127,9 +127,9 @@
             this.lblIntegrantes.Location = new System.Drawing.Point(13, 85);
             this.lblIntegrantes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIntegrantes.Name = "lblIntegrantes";
-            this.lblIntegrantes.Size = new System.Drawing.Size(81, 18);
+            this.lblIntegrantes.Size = new System.Drawing.Size(155, 18);
             this.lblIntegrantes.TabIndex = 12;
-            this.lblIntegrantes.Text = "Integrantes";
+            this.lblIntegrantes.Text = "Número de Integrantes";
             // 
             // gbEquipo
             // 
@@ -384,7 +384,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 115);
+            this.ClientSize = new System.Drawing.Size(458, 115);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.gbEquipo);

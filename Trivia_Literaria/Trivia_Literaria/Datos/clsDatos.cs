@@ -161,7 +161,7 @@ namespace Trivia_Literaria.Datos
                     com.Connection = cConexion;
                     max = Int16.Parse(com.ExecuteScalar().ToString());
                     id = rnd.Next(min,max);
-                    sql="SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = "+ id + " AND UTILIZADA = 0";
+                    sql="SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = "+ id + " AND UTILIZADA = 0 AND COMBO = 'A'";
                     com.CommandText = sql;
                     com.CommandType = CommandType.Text;
                     com.Connection = cConexion;
@@ -175,7 +175,7 @@ namespace Trivia_Literaria.Datos
                     }
                     while(pregunta.Equals("")){
                         id = rnd.Next(min, max);
-                        sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0";
+                        sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0  AND COMBO = 'A'";
                         com.CommandText = sql;
                         com.CommandType = CommandType.Text;
                         com.Connection = cConexion;
@@ -221,7 +221,7 @@ namespace Trivia_Literaria.Datos
                     com.Connection = cConexion;
                     max = Int16.Parse(com.ExecuteScalar().ToString());
                     id = rnd.Next(min, max);
-                    sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0";
+                    sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0 AND COMBO = 'B'";
                     com.CommandText = sql;
                     com.CommandType = CommandType.Text;
                     com.Connection = cConexion;
@@ -236,7 +236,7 @@ namespace Trivia_Literaria.Datos
                     while (pregunta.Equals(""))
                     {
                         id = rnd.Next(min, max);
-                        sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0";
+                        sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0 AND COMBO = 'B'";
                         com.CommandText = sql;
                         com.CommandType = CommandType.Text;
                         com.Connection = cConexion;
@@ -292,7 +292,7 @@ namespace Trivia_Literaria.Datos
                 com.Connection = cConexion;
                 max = Int16.Parse(com.ExecuteScalar().ToString());
                 id = rnd.Next(min, max);
-                sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0";
+                sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0 AND COMBO = 'A'";
                 com.CommandText = sql;
                 com.CommandType = CommandType.Text;
                 com.Connection = cConexion;
@@ -307,7 +307,7 @@ namespace Trivia_Literaria.Datos
                 while (pregunta.Equals(""))
                 {
                     id = rnd.Next(min, max);
-                    sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0";
+                    sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0 AND COMBO = 'A'";
                     com.CommandText = sql;
                     com.CommandType = CommandType.Text;
                     com.Connection = cConexion;
@@ -350,7 +350,7 @@ namespace Trivia_Literaria.Datos
                 com.Connection = cConexion;
                 max = Int16.Parse(com.ExecuteScalar().ToString());
                 id = rnd.Next(min, max);
-                sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0";
+                sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0 AND COMBO = 'B'";
                 com.CommandText = sql;
                 com.CommandType = CommandType.Text;
                 com.Connection = cConexion;
@@ -365,7 +365,7 @@ namespace Trivia_Literaria.Datos
                 while (pregunta.Equals(""))
                 {
                     id = rnd.Next(min, max);
-                    sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0";
+                    sql = "SELECT PREGUNTA FROM PREGUNTAS WHERE idpreguntas = " + id + " AND UTILIZADA = 0 AND COMBO = 'B'";
                     com.CommandText = sql;
                     com.CommandType = CommandType.Text;
                     com.Connection = cConexion;
@@ -426,5 +426,6 @@ namespace Trivia_Literaria.Datos
             com.ExecuteNonQuery();
             Cerrar();
         }
+
     }
 }
