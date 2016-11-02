@@ -20,7 +20,7 @@ namespace Trivia_Literaria.Vista
         }
 
         // i = Ronda actual, j = Equipo actual, p = Pregunta seleccionada, seg = segundo, indexRobo = quién robó, puntosRobo = Cuántos puntos hay involucrados (1 o -1)
-        public int i=0, j=0, p, seg=0, indexRobo, puntosRobo;
+        public int i=0, j=0, p, seg=0, indexRobo, puntosRobo,permutacion=0;
         
         SoundPlayer sonido = new SoundPlayer(@"Speech Off.wav");
 
@@ -28,6 +28,7 @@ namespace Trivia_Literaria.Vista
         public string[] preguntas = new string[8];
         public string[] respuestas = new string[8];
         public int[] score;
+        private bool[] preguntasOrden=new bool[8];
 
         private void btnCorrecto_Click(object sender, EventArgs e)
         {
@@ -79,6 +80,10 @@ namespace Trivia_Literaria.Vista
                     }
                 }
                 else {
+                    for (int o = 0; o < 8;o++ )
+                    {
+                        preguntasOrden[o] = false;
+                    }
                     char d = ';';
                     string extra;
                     string[] arr;
@@ -119,7 +124,7 @@ namespace Trivia_Literaria.Vista
                       Si la ronda es <= 9 (10 rondas) iniciamos los equipos a 0
                       Sino acabamos la trivia*/
                     i++;
-                    if (i < 5)
+                    if (i < 10)
                     {
                         j = 0;
                         mtdVerBotones();
@@ -153,13 +158,19 @@ namespace Trivia_Literaria.Vista
         private void btn1_Click(object sender, EventArgs e)
         {
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
-            p = 0;
+            Random rnd = new Random();
+            p = rnd.Next(0,7);
+            while (preguntasOrden[p])
+            {
+                p = rnd.Next(0, 7);
+            }
+            preguntasOrden[p] = true;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(respuestas[0]);
+            objDatos.Usada(respuestas[p]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
-            txtPregunta.Text = preguntas[0];
+            txtPregunta.Text = preguntas[p];
             btn1.Visible = false;
             mtdDesactivarBotones();
             tmTemporizador.Enabled = true;
@@ -169,13 +180,19 @@ namespace Trivia_Literaria.Vista
         private void btn2_Click(object sender, EventArgs e)
         {
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
-            p = 1;
+            Random rnd = new Random();
+            p = rnd.Next(0, 7);
+            while (preguntasOrden[p])
+            {
+                p = rnd.Next(0, 7);
+            }
+            preguntasOrden[p] = true;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(respuestas[1]);
+            objDatos.Usada(respuestas[p]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
-            txtPregunta.Text = preguntas[1];
+            txtPregunta.Text = preguntas[p];
             btn2.Visible = false;
             mtdDesactivarBotones();
             tmTemporizador.Enabled = true;
@@ -185,13 +202,19 @@ namespace Trivia_Literaria.Vista
         private void btn3_Click(object sender, EventArgs e)
         {
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
-            p = 2;
+            Random rnd = new Random();
+            p = rnd.Next(0, 7);
+            while (preguntasOrden[p])
+            {
+                p = rnd.Next(0, 7);
+            }
+            preguntasOrden[p] = true;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(respuestas[2]);
+            objDatos.Usada(respuestas[p]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
-            txtPregunta.Text = preguntas[2];
+            txtPregunta.Text = preguntas[p];
             btn3.Visible = false;
             mtdDesactivarBotones();
             tmTemporizador.Enabled = true;
@@ -201,13 +224,19 @@ namespace Trivia_Literaria.Vista
         private void btn4_Click(object sender, EventArgs e)
         {
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
-            p = 3;
+            Random rnd = new Random();
+            p = rnd.Next(0, 7);
+            while (preguntasOrden[p])
+            {
+                p = rnd.Next(0, 7);
+            }
+            preguntasOrden[p] = true;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(respuestas[3]);
+            objDatos.Usada(respuestas[p]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
-            txtPregunta.Text = preguntas[3];
+            txtPregunta.Text = preguntas[p];
             btn4.Visible = false;
             mtdDesactivarBotones();
             tmTemporizador.Enabled = true;
@@ -217,13 +246,19 @@ namespace Trivia_Literaria.Vista
         private void btn5_Click(object sender, EventArgs e)
         {
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
-            p = 4;
+            Random rnd = new Random();
+            p = rnd.Next(0, 7);
+            while (preguntasOrden[p])
+            {
+                p = rnd.Next(0, 7);
+            }
+            preguntasOrden[p] = true;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(respuestas[4]);
+            objDatos.Usada(respuestas[p]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
-            txtPregunta.Text = preguntas[4];
+            txtPregunta.Text = preguntas[p];
             btn5.Visible = false;
             mtdDesactivarBotones();
             tmTemporizador.Enabled = true;
@@ -233,13 +268,19 @@ namespace Trivia_Literaria.Vista
         private void btn6_Click(object sender, EventArgs e)
         {
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
-            p = 5;
+            Random rnd = new Random();
+            p = rnd.Next(0, 7);
+            while (preguntasOrden[p])
+            {
+                p = rnd.Next(0, 7);
+            }
+            preguntasOrden[p] = true;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(respuestas[5]);
+            objDatos.Usada(respuestas[p]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
-            txtPregunta.Text = preguntas[5];
+            txtPregunta.Text = preguntas[p];
             btn6.Visible = false;
             mtdDesactivarBotones();
             tmTemporizador.Enabled = true;
@@ -249,13 +290,19 @@ namespace Trivia_Literaria.Vista
         private void btn7_Click(object sender, EventArgs e)
         {
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
-            p = 6;
+            Random rnd = new Random();
+            p = rnd.Next(0, 7);
+            while (preguntasOrden[p])
+            {
+                p = rnd.Next(0, 7);
+            }
+            preguntasOrden[p] = true;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(respuestas[6]);
+            objDatos.Usada(respuestas[p]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
-            txtPregunta.Text = preguntas[6];
+            txtPregunta.Text = preguntas[p];
             btn7.Visible = false;
             mtdDesactivarBotones();
             tmTemporizador.Enabled = true;
@@ -265,13 +312,19 @@ namespace Trivia_Literaria.Vista
         private void btn8_Click(object sender, EventArgs e)
         {
             //P = Posición del arreglo, donde está la pregunta correspondiente a este botón
-            p = 7;
+            Random rnd = new Random();
+            p = rnd.Next(0, 7);
+            while (preguntasOrden[p])
+            {
+                p = rnd.Next(0, 7);
+            }
+            preguntasOrden[p] = true;
             Datos.clsDatos objDatos = new Datos.clsDatos();
-            objDatos.Usada(respuestas[7]);
+            objDatos.Usada(respuestas[p]);
             //Evitamos que el texto esté seleccionado
             txtPregunta.Focus();
             //Mostramos la pregunta correspondiente
-            txtPregunta.Text = preguntas[7];
+            txtPregunta.Text = preguntas[p];
             btn8.Visible = false;
             mtdDesactivarBotones();
             tmTemporizador.Enabled = true;
@@ -405,7 +458,7 @@ namespace Trivia_Literaria.Vista
             else {
                 //Quita la pregunta y sigue mostrando el segundero
                 txtPregunta.Text = "";
-                if (!(seg == 30))
+                if (!(seg == 25))
                 {
                     //Activamos los botones de correcto e incorrecto (entra solo si aún no están activos)
                     if (!btnCorrecto.Visible | !btnCorrecto.Visible)
@@ -414,7 +467,7 @@ namespace Trivia_Literaria.Vista
                         btnIncorrecto.Visible = true;
                     }
                     //Los últimos 5 segundos se muestra el segundero en rojo y suena
-                    if(seg >= 25){
+                    if(seg >= 20){
                         //Suena
                         sonido.Play();
                         lblTime.ForeColor = Color.Red;
@@ -422,7 +475,7 @@ namespace Trivia_Literaria.Vista
                     lblTime.Text = "" + seg;
                 }
                 else {
-                    /*Al terminar los 30 segundos se desactiva el timer,
+                    /*Al terminar los 25 segundos se desactiva el timer,
                       Muestra el mensaje de tiempo terminado y el segundero regresa a 0*/
                     tmTemporizador.Enabled = false;
                     lblTime.Text = "OVER";
@@ -503,6 +556,10 @@ namespace Trivia_Literaria.Vista
             }
             else
             {
+                for (int o = 0; o < 8; o++)
+                {
+                    preguntasOrden[o] = false;
+                }
                 char d = ';';
                 string extra;
                 string[] arr;
@@ -579,6 +636,11 @@ namespace Trivia_Literaria.Vista
         private void frmEliminatoria_FormClosing(object sender, FormClosingEventArgs e)
         {
             tmTemporizador.Enabled = false;
+        }
+
+        private void txtPregunta_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -239,6 +239,7 @@
             this.txtPregunta.Name = "txtPregunta";
             this.txtPregunta.Size = new System.Drawing.Size(561, 143);
             this.txtPregunta.TabIndex = 5;
+            this.txtPregunta.TextChanged += new System.EventHandler(this.txtPregunta_TextChanged_1);
             this.txtPregunta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPregunta_KeyPress_1);
             // 
             // btnAclaracion
