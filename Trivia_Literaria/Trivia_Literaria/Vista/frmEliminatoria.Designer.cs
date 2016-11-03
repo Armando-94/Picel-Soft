@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEliminatoria));
             this.lblEq = new System.Windows.Forms.Label();
             this.lblEquipo = new System.Windows.Forms.Label();
             this.lblSco = new System.Windows.Forms.Label();
@@ -54,18 +55,22 @@
             // lblEq
             // 
             this.lblEq.AutoSize = true;
+            this.lblEq.BackColor = System.Drawing.Color.Transparent;
             this.lblEq.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEq.Location = new System.Drawing.Point(13, 9);
+            this.lblEq.ForeColor = System.Drawing.Color.White;
+            this.lblEq.Location = new System.Drawing.Point(132, 25);
             this.lblEq.Name = "lblEq";
-            this.lblEq.Size = new System.Drawing.Size(76, 18);
+            this.lblEq.Size = new System.Drawing.Size(71, 18);
             this.lblEq.TabIndex = 1;
-            this.lblEq.Text = "EQUIPO: ";
+            this.lblEq.Text = "EQUIPO:";
             // 
             // lblEquipo
             // 
             this.lblEquipo.AutoSize = true;
+            this.lblEquipo.BackColor = System.Drawing.Color.Transparent;
             this.lblEquipo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEquipo.Location = new System.Drawing.Point(85, 9);
+            this.lblEquipo.ForeColor = System.Drawing.Color.White;
+            this.lblEquipo.Location = new System.Drawing.Point(148, 43);
             this.lblEquipo.Name = "lblEquipo";
             this.lblEquipo.Size = new System.Drawing.Size(44, 18);
             this.lblEquipo.TabIndex = 1;
@@ -74,8 +79,10 @@
             // lblSco
             // 
             this.lblSco.AutoSize = true;
+            this.lblSco.BackColor = System.Drawing.Color.Transparent;
             this.lblSco.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSco.Location = new System.Drawing.Point(293, 9);
+            this.lblSco.ForeColor = System.Drawing.Color.White;
+            this.lblSco.Location = new System.Drawing.Point(351, 25);
             this.lblSco.Name = "lblSco";
             this.lblSco.Size = new System.Drawing.Size(66, 18);
             this.lblSco.TabIndex = 1;
@@ -84,8 +91,10 @@
             // lblScore
             // 
             this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(353, 9);
+            this.lblScore.ForeColor = System.Drawing.Color.White;
+            this.lblScore.Location = new System.Drawing.Point(371, 43);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(19, 18);
             this.lblScore.TabIndex = 1;
@@ -94,18 +103,22 @@
             // lblTiempo
             // 
             this.lblTiempo.AutoSize = true;
+            this.lblTiempo.BackColor = System.Drawing.Color.Transparent;
             this.lblTiempo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiempo.Location = new System.Drawing.Point(499, 9);
+            this.lblTiempo.ForeColor = System.Drawing.Color.White;
+            this.lblTiempo.Location = new System.Drawing.Point(576, 25);
             this.lblTiempo.Name = "lblTiempo";
-            this.lblTiempo.Size = new System.Drawing.Size(59, 18);
+            this.lblTiempo.Size = new System.Drawing.Size(54, 18);
             this.lblTiempo.TabIndex = 1;
-            this.lblTiempo.Text = "TIME: ";
+            this.lblTiempo.Text = "TIME:";
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(557, 9);
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(597, 43);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(15, 18);
             this.lblTime.TabIndex = 2;
@@ -114,7 +127,7 @@
             // btnCorrecto
             // 
             this.btnCorrecto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCorrecto.Location = new System.Drawing.Point(63, 299);
+            this.btnCorrecto.Location = new System.Drawing.Point(161, 396);
             this.btnCorrecto.Name = "btnCorrecto";
             this.btnCorrecto.Size = new System.Drawing.Size(89, 35);
             this.btnCorrecto.TabIndex = 4;
@@ -126,7 +139,7 @@
             // btnIncorrecto
             // 
             this.btnIncorrecto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncorrecto.Location = new System.Drawing.Point(203, 299);
+            this.btnIncorrecto.Location = new System.Drawing.Point(301, 396);
             this.btnIncorrecto.Name = "btnIncorrecto";
             this.btnIncorrecto.Size = new System.Drawing.Size(89, 35);
             this.btnIncorrecto.TabIndex = 4;
@@ -138,7 +151,7 @@
             // btnRobo
             // 
             this.btnRobo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRobo.Location = new System.Drawing.Point(365, 299);
+            this.btnRobo.Location = new System.Drawing.Point(463, 396);
             this.btnRobo.Name = "btnRobo";
             this.btnRobo.Size = new System.Drawing.Size(89, 35);
             this.btnRobo.TabIndex = 4;
@@ -154,9 +167,14 @@
             // 
             // btn8
             // 
-            this.btn8.Location = new System.Drawing.Point(502, 91);
+            this.btn8.FlatAppearance.BorderSize = 0;
+            this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn8.Image = ((System.Drawing.Image)(resources.GetObject("btn8.Image")));
+            this.btn8.Location = new System.Drawing.Point(619, 172);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(75, 23);
+            this.btn8.Size = new System.Drawing.Size(56, 60);
             this.btn8.TabIndex = 0;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
@@ -164,9 +182,14 @@
             // 
             // btn7
             // 
-            this.btn7.Location = new System.Drawing.Point(339, 91);
+            this.btn7.FlatAppearance.BorderSize = 0;
+            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn7.Image = ((System.Drawing.Image)(resources.GetObject("btn7.Image")));
+            this.btn7.Location = new System.Drawing.Point(463, 172);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(75, 23);
+            this.btn7.Size = new System.Drawing.Size(56, 60);
             this.btn7.TabIndex = 0;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
@@ -174,9 +197,14 @@
             // 
             // btn4
             // 
-            this.btn4.Location = new System.Drawing.Point(502, 59);
+            this.btn4.FlatAppearance.BorderSize = 0;
+            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn4.Image = ((System.Drawing.Image)(resources.GetObject("btn4.Image")));
+            this.btn4.Location = new System.Drawing.Point(586, 90);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(75, 23);
+            this.btn4.Size = new System.Drawing.Size(56, 60);
             this.btn4.TabIndex = 0;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
@@ -184,9 +212,14 @@
             // 
             // btn6
             // 
-            this.btn6.Location = new System.Drawing.Point(170, 91);
+            this.btn6.FlatAppearance.BorderSize = 0;
+            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn6.Image = ((System.Drawing.Image)(resources.GetObject("btn6.Image")));
+            this.btn6.Location = new System.Drawing.Point(301, 172);
             this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(75, 23);
+            this.btn6.Size = new System.Drawing.Size(56, 60);
             this.btn6.TabIndex = 0;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
@@ -194,9 +227,14 @@
             // 
             // btn3
             // 
-            this.btn3.Location = new System.Drawing.Point(339, 59);
+            this.btn3.FlatAppearance.BorderSize = 0;
+            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn3.Image = ((System.Drawing.Image)(resources.GetObject("btn3.Image")));
+            this.btn3.Location = new System.Drawing.Point(430, 90);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(75, 23);
+            this.btn3.Size = new System.Drawing.Size(56, 60);
             this.btn3.TabIndex = 0;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
@@ -204,9 +242,14 @@
             // 
             // btn5
             // 
-            this.btn5.Location = new System.Drawing.Point(16, 91);
+            this.btn5.FlatAppearance.BorderSize = 0;
+            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn5.Image = ((System.Drawing.Image)(resources.GetObject("btn5.Image")));
+            this.btn5.Location = new System.Drawing.Point(148, 172);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(75, 23);
+            this.btn5.Size = new System.Drawing.Size(56, 60);
             this.btn5.TabIndex = 0;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
@@ -214,9 +257,14 @@
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(170, 59);
+            this.btn2.FlatAppearance.BorderSize = 0;
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn2.Image = ((System.Drawing.Image)(resources.GetObject("btn2.Image")));
+            this.btn2.Location = new System.Drawing.Point(272, 90);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(75, 23);
+            this.btn2.Size = new System.Drawing.Size(56, 60);
             this.btn2.TabIndex = 0;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
@@ -224,9 +272,14 @@
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(16, 59);
+            this.btn1.FlatAppearance.BorderSize = 0;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn1.Image = ((System.Drawing.Image)(resources.GetObject("btn1.Image")));
+            this.btn1.Location = new System.Drawing.Point(114, 90);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(75, 23);
+            this.btn1.Size = new System.Drawing.Size(56, 60);
             this.btn1.TabIndex = 0;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
@@ -234,7 +287,7 @@
             // 
             // txtPregunta
             // 
-            this.txtPregunta.Location = new System.Drawing.Point(16, 141);
+            this.txtPregunta.Location = new System.Drawing.Point(114, 238);
             this.txtPregunta.Multiline = true;
             this.txtPregunta.Name = "txtPregunta";
             this.txtPregunta.Size = new System.Drawing.Size(561, 143);
@@ -244,7 +297,7 @@
             // 
             // btnAclaracion
             // 
-            this.btnAclaracion.Location = new System.Drawing.Point(16, 357);
+            this.btnAclaracion.Location = new System.Drawing.Point(114, 454);
             this.btnAclaracion.Name = "btnAclaracion";
             this.btnAclaracion.Size = new System.Drawing.Size(75, 23);
             this.btnAclaracion.TabIndex = 6;
@@ -257,7 +310,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 392);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(792, 485);
             this.Controls.Add(this.btnAclaracion);
             this.Controls.Add(this.txtPregunta);
             this.Controls.Add(this.btnRobo);
