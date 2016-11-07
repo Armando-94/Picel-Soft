@@ -58,7 +58,7 @@
             this.lblEq.BackColor = System.Drawing.Color.Transparent;
             this.lblEq.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEq.ForeColor = System.Drawing.Color.White;
-            this.lblEq.Location = new System.Drawing.Point(132, 25);
+            this.lblEq.Location = new System.Drawing.Point(45, 25);
             this.lblEq.Name = "lblEq";
             this.lblEq.Size = new System.Drawing.Size(71, 18);
             this.lblEq.TabIndex = 1;
@@ -70,7 +70,7 @@
             this.lblEquipo.BackColor = System.Drawing.Color.Transparent;
             this.lblEquipo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEquipo.ForeColor = System.Drawing.Color.White;
-            this.lblEquipo.Location = new System.Drawing.Point(148, 43);
+            this.lblEquipo.Location = new System.Drawing.Point(61, 43);
             this.lblEquipo.Name = "lblEquipo";
             this.lblEquipo.Size = new System.Drawing.Size(44, 18);
             this.lblEquipo.TabIndex = 1;
@@ -126,37 +126,49 @@
             // 
             // btnCorrecto
             // 
-            this.btnCorrecto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCorrecto.Location = new System.Drawing.Point(161, 396);
+            this.btnCorrecto.BackColor = System.Drawing.Color.Black;
+            this.btnCorrecto.FlatAppearance.BorderSize = 0;
+            this.btnCorrecto.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCorrecto.ForeColor = System.Drawing.Color.White;
+            this.btnCorrecto.Image = ((System.Drawing.Image)(resources.GetObject("btnCorrecto.Image")));
+            this.btnCorrecto.Location = new System.Drawing.Point(64, 438);
             this.btnCorrecto.Name = "btnCorrecto";
-            this.btnCorrecto.Size = new System.Drawing.Size(89, 35);
+            this.btnCorrecto.Size = new System.Drawing.Size(119, 38);
             this.btnCorrecto.TabIndex = 4;
             this.btnCorrecto.Text = "Correcto";
-            this.btnCorrecto.UseVisualStyleBackColor = true;
+            this.btnCorrecto.UseVisualStyleBackColor = false;
             this.btnCorrecto.Visible = false;
             this.btnCorrecto.Click += new System.EventHandler(this.btnCorrecto_Click);
             // 
             // btnIncorrecto
             // 
-            this.btnIncorrecto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncorrecto.Location = new System.Drawing.Point(301, 396);
+            this.btnIncorrecto.BackColor = System.Drawing.Color.Black;
+            this.btnIncorrecto.FlatAppearance.BorderSize = 0;
+            this.btnIncorrecto.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncorrecto.ForeColor = System.Drawing.Color.White;
+            this.btnIncorrecto.Image = ((System.Drawing.Image)(resources.GetObject("btnIncorrecto.Image")));
+            this.btnIncorrecto.Location = new System.Drawing.Point(242, 437);
             this.btnIncorrecto.Name = "btnIncorrecto";
-            this.btnIncorrecto.Size = new System.Drawing.Size(89, 35);
+            this.btnIncorrecto.Size = new System.Drawing.Size(121, 38);
             this.btnIncorrecto.TabIndex = 4;
             this.btnIncorrecto.Text = "Incorrecto";
-            this.btnIncorrecto.UseVisualStyleBackColor = true;
+            this.btnIncorrecto.UseVisualStyleBackColor = false;
             this.btnIncorrecto.Visible = false;
             this.btnIncorrecto.Click += new System.EventHandler(this.btnIncorrecto_Click);
             // 
             // btnRobo
             // 
-            this.btnRobo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRobo.Location = new System.Drawing.Point(463, 396);
+            this.btnRobo.BackColor = System.Drawing.Color.Black;
+            this.btnRobo.FlatAppearance.BorderSize = 0;
+            this.btnRobo.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRobo.ForeColor = System.Drawing.Color.White;
+            this.btnRobo.Image = ((System.Drawing.Image)(resources.GetObject("btnRobo.Image")));
+            this.btnRobo.Location = new System.Drawing.Point(430, 438);
             this.btnRobo.Name = "btnRobo";
-            this.btnRobo.Size = new System.Drawing.Size(89, 35);
+            this.btnRobo.Size = new System.Drawing.Size(112, 38);
             this.btnRobo.TabIndex = 4;
             this.btnRobo.Text = "Robo";
-            this.btnRobo.UseVisualStyleBackColor = true;
+            this.btnRobo.UseVisualStyleBackColor = false;
             this.btnRobo.Visible = false;
             this.btnRobo.Click += new System.EventHandler(this.btnRobo_Click);
             // 
@@ -168,11 +180,10 @@
             // btn8
             // 
             this.btn8.FlatAppearance.BorderSize = 0;
-            this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn8.Image = ((System.Drawing.Image)(resources.GetObject("btn8.Image")));
-            this.btn8.Location = new System.Drawing.Point(619, 172);
+            this.btn8.Location = new System.Drawing.Point(619, 163);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(56, 60);
             this.btn8.TabIndex = 0;
@@ -183,11 +194,10 @@
             // btn7
             // 
             this.btn7.FlatAppearance.BorderSize = 0;
-            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn7.Image = ((System.Drawing.Image)(resources.GetObject("btn7.Image")));
-            this.btn7.Location = new System.Drawing.Point(463, 172);
+            this.btn7.Location = new System.Drawing.Point(447, 163);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(56, 60);
             this.btn7.TabIndex = 0;
@@ -198,11 +208,10 @@
             // btn4
             // 
             this.btn4.FlatAppearance.BorderSize = 0;
-            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn4.Image = ((System.Drawing.Image)(resources.GetObject("btn4.Image")));
-            this.btn4.Location = new System.Drawing.Point(586, 90);
+            this.btn4.Location = new System.Drawing.Point(619, 90);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(56, 60);
             this.btn4.TabIndex = 0;
@@ -213,11 +222,10 @@
             // btn6
             // 
             this.btn6.FlatAppearance.BorderSize = 0;
-            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn6.Image = ((System.Drawing.Image)(resources.GetObject("btn6.Image")));
-            this.btn6.Location = new System.Drawing.Point(301, 172);
+            this.btn6.Location = new System.Drawing.Point(272, 163);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(56, 60);
             this.btn6.TabIndex = 0;
@@ -228,11 +236,10 @@
             // btn3
             // 
             this.btn3.FlatAppearance.BorderSize = 0;
-            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn3.Image = ((System.Drawing.Image)(resources.GetObject("btn3.Image")));
-            this.btn3.Location = new System.Drawing.Point(430, 90);
+            this.btn3.Location = new System.Drawing.Point(447, 90);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(56, 60);
             this.btn3.TabIndex = 0;
@@ -243,11 +250,10 @@
             // btn5
             // 
             this.btn5.FlatAppearance.BorderSize = 0;
-            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn5.Image = ((System.Drawing.Image)(resources.GetObject("btn5.Image")));
-            this.btn5.Location = new System.Drawing.Point(148, 172);
+            this.btn5.Location = new System.Drawing.Point(114, 163);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(56, 60);
             this.btn5.TabIndex = 0;
@@ -258,7 +264,6 @@
             // btn2
             // 
             this.btn2.FlatAppearance.BorderSize = 0;
-            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn2.Image = ((System.Drawing.Image)(resources.GetObject("btn2.Image")));
@@ -273,7 +278,6 @@
             // btn1
             // 
             this.btn1.FlatAppearance.BorderSize = 0;
-            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn1.Image = ((System.Drawing.Image)(resources.GetObject("btn1.Image")));
@@ -287,22 +291,28 @@
             // 
             // txtPregunta
             // 
-            this.txtPregunta.Location = new System.Drawing.Point(114, 238);
+            this.txtPregunta.BackColor = System.Drawing.Color.Khaki;
+            this.txtPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPregunta.Location = new System.Drawing.Point(107, 234);
             this.txtPregunta.Multiline = true;
             this.txtPregunta.Name = "txtPregunta";
-            this.txtPregunta.Size = new System.Drawing.Size(561, 143);
+            this.txtPregunta.Size = new System.Drawing.Size(568, 197);
             this.txtPregunta.TabIndex = 5;
             this.txtPregunta.TextChanged += new System.EventHandler(this.txtPregunta_TextChanged_1);
             this.txtPregunta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPregunta_KeyPress_1);
             // 
             // btnAclaracion
             // 
-            this.btnAclaracion.Location = new System.Drawing.Point(114, 454);
+            this.btnAclaracion.BackColor = System.Drawing.Color.DarkRed;
+            this.btnAclaracion.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAclaracion.ForeColor = System.Drawing.Color.White;
+            this.btnAclaracion.Location = new System.Drawing.Point(610, 446);
             this.btnAclaracion.Name = "btnAclaracion";
-            this.btnAclaracion.Size = new System.Drawing.Size(75, 23);
+            this.btnAclaracion.Size = new System.Drawing.Size(121, 29);
             this.btnAclaracion.TabIndex = 6;
             this.btnAclaracion.Text = "Aclaración";
-            this.btnAclaracion.UseVisualStyleBackColor = true;
+            this.btnAclaracion.UseVisualStyleBackColor = false;
             this.btnAclaracion.Visible = false;
             this.btnAclaracion.Click += new System.EventHandler(this.btnAclaracion_Click);
             // 
@@ -311,7 +321,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(792, 485);
+            this.ClientSize = new System.Drawing.Size(792, 502);
             this.Controls.Add(this.btnAclaracion);
             this.Controls.Add(this.txtPregunta);
             this.Controls.Add(this.btnRobo);
@@ -331,6 +341,8 @@
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
+            this.MaximumSize = new System.Drawing.Size(808, 540);
+            this.MinimumSize = new System.Drawing.Size(808, 540);
             this.Name = "frmEliminatoria";
             this.Text = "Eliminatoria";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEliminatoria_FormClosing);

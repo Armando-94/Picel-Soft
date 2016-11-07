@@ -76,31 +76,44 @@ namespace Trivia_Literaria.Datos
 
         public string[] Equipos(char trivia) {
             string sql;
-            string[] arr=new string[5];
+            int tri,n;
             MySqlCommand com;
             Conectar();
             com=new MySqlCommand();
             if (trivia == 'A')
             {
-                for (int i = 1; i <= 5;i++ )
-                {
-                    sql = "SELECT NOMBRE FROM EQUIPOS WHERE ID_EQUIPO = " + i;
-                    com.CommandText = sql;
-                    com.CommandType = CommandType.Text;
-                    com.Connection = cConexion;
-                    arr[i-1] = com.ExecuteScalar().ToString();
-                }
+                tri = 1;
             }
-            else
+            else {
+                tri = 2;
+            }
+            com.Parameters.AddWithValue("@TRIVIA", tri);
+            sql = "SELECT COUNT(Equipos_Id_equipo) FROM equipos_trivias WHERE Trivias_idTrivias = @TRIVIA";
+            com.CommandText = sql;
+            com.CommandType = CommandType.Text;
+            com.Connection = cConexion;
+            n = int.Parse(com.ExecuteScalar().ToString());
+            string[] arr = new string[n];
+            int aux = 0;
+            MySqlDataReader dr;
+            sql = "SELECT Equipos_Id_equipo FROM equipos_trivias WHERE Trivias_idTrivias = @TRIVIA";
+            com.CommandText = sql;
+            com.CommandType = CommandType.Text;
+            com.Connection = cConexion;
+            dr = com.ExecuteReader();
+            while(dr.Read()){
+                arr[aux] = dr.GetString("Equipos_Id_equipo");
+                aux++;
+            }
+            Cerrar();
+            Conectar();
+            for (int o = 0; o < arr.Length;o++ )
             {
-                for (int i = 6; i <= 10;i++ )
-                {
-                    sql = "SELECT NOMBRE FROM EQUIPOS WHERE ID_EQUIPO = " + i;
-                    com.CommandText = sql;
-                    com.CommandType = CommandType.Text;
-                    com.Connection = cConexion;
-                    arr[i - 6] = com.ExecuteScalar().ToString();
-                }
+                sql = "SELECT NOMBRE FROM EQUIPOS WHERE Id_equipo = "+arr[o];
+                com.CommandText = sql;
+                com.CommandType = CommandType.Text;
+                com.Connection = cConexion;
+                arr[o] = com.ExecuteScalar().ToString();
             }
             Cerrar();
             return arr;
@@ -108,31 +121,46 @@ namespace Trivia_Literaria.Datos
 
         public int[] Score(char trivia) {
             string sql;
-            int[] arr = new int[5];
+            int tri, n;
             MySqlCommand com;
             Conectar();
             com = new MySqlCommand();
             if (trivia == 'A')
             {
-                for (int i = 1; i <= 5; i++)
-                {
-                    sql = "SELECT SCOREFINAL FROM EQUIPOS WHERE ID_EQUIPO = " + i;
-                    com.CommandText = sql;
-                    com.CommandType = CommandType.Text;
-                    com.Connection = cConexion;
-                    arr[i - 1] = Int16.Parse(com.ExecuteScalar().ToString());
-                }
+                tri = 1;
             }
             else
             {
-                for (int i = 6; i <= 10; i++)
-                {
-                    sql = "SELECT SCOREFINAL FROM EQUIPOS WHERE ID_EQUIPO = " + i;
-                    com.CommandText = sql;
-                    com.CommandType = CommandType.Text;
-                    com.Connection = cConexion;
-                    arr[i - 6] = Int16.Parse(com.ExecuteScalar().ToString());
-                }
+                tri = 2;
+            }
+            com.Parameters.AddWithValue("@TRIVIA", tri);
+            sql = "SELECT COUNT(Equipos_Id_equipo) FROM equipos_trivias WHERE Trivias_idTrivias = @TRIVIA";
+            com.CommandText = sql;
+            com.CommandType = CommandType.Text;
+            com.Connection = cConexion;
+            n = int.Parse(com.ExecuteScalar().ToString());
+            int[] arr = new int[n];
+            int aux = 0;
+            MySqlDataReader dr;
+            sql = "SELECT Equipos_Id_equipo FROM equipos_trivias WHERE Trivias_idTrivias = @TRIVIA";
+            com.CommandText = sql;
+            com.CommandType = CommandType.Text;
+            com.Connection = cConexion;
+            dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                arr[aux] = dr.GetInt16("Equipos_Id_equipo");
+                aux++;
+            }
+            Cerrar();
+            Conectar();
+            for (int o = 0; o < arr.Length; o++)
+            {
+                sql = "SELECT ScoreFinal FROM EQUIPOS WHERE Id_equipo = " + arr[o];
+                com.CommandText = sql;
+                com.CommandType = CommandType.Text;
+                com.Connection = cConexion;
+                arr[o] = int.Parse(com.ExecuteScalar().ToString());
             }
             Cerrar();
             return arr;
@@ -427,5 +455,33 @@ namespace Trivia_Literaria.Datos
             Cerrar();
         }
 
+        public void AgregarEquipo_Trivia(string trivia,string equipo) {
+            string sql;
+            int tri,equi;
+            MySqlCommand com;
+            Conectar();
+            com = new MySqlCommand();
+            if (trivia.Equals("Trivia A"))
+            {
+                tri = 1;
+            }
+            else {
+                tri = 2;
+            }
+            com.Parameters.AddWithValue("@EQUIPO", equipo);
+            sql = "SELECT ID_EQUIPO FROM EQUIPOS WHERE NOMBRE = @EQUIPO";
+            com.CommandText = sql;
+            com.CommandType = CommandType.Text;
+            com.Connection = cConexion;
+            equi = int.Parse(com.ExecuteScalar().ToString());
+            com.Parameters.AddWithValue("@TRIVIA", tri);
+            com.Parameters.AddWithValue("@EQUI", equi);
+            sql = "INSERT INTO equipos_trivias VALUES (@EQUI,@TRIVIA)";
+            com.CommandText = sql;
+            com.CommandType = CommandType.Text;
+            com.Connection = cConexion;
+            com.ExecuteNonQuery();
+            Cerrar();
+        }
     }
 }

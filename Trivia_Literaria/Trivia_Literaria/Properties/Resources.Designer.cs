@@ -59,5 +59,85 @@ namespace Trivia_Literaria.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _12504403_cortinas_luminosas_en_el_concepto_de_teatro {
+            get {
+                object obj = ResourceManager.GetObject("12504403-cortinas-luminosas-en-el-concepto-de-teatro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_glossy_button_hi {
+            get {
+                object obj = ResourceManager.GetObject("black-glossy-button-hi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circulo_de_energia_naranja_sobre_un_fondo_negro_1053_596 {
+            get {
+                object obj = ResourceManager.GetObject("circulo-de-energia-naranja-sobre-un-fondo-negro_1053-596", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_escenario {
+            get {
+                object obj = ResourceManager.GetObject("fondo_escenario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_escenario_P1 {
+            get {
+                object obj = ResourceManager.GetObject("fondo_escenario_P1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap libro_mágico {
+            get {
+                object obj = ResourceManager.GetObject("libro mágico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maxresdefault {
+            get {
+                object obj = ResourceManager.GetObject("maxresdefault", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap open_book_icon_free_books_and_education_13 {
+            get {
+                object obj = ResourceManager.GetObject("open-book-icon-free-books-and-education-13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

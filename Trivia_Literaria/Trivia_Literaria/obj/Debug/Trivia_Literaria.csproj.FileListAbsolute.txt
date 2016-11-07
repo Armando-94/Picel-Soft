@@ -55,3 +55,48 @@ C:\Users\Oldair\Downloads\Picel-Soft-master (1)\Picel-Soft-master\Trivia_Literar
 C:\Users\Oldair\Downloads\Picel-Soft-master (1)\Picel-Soft-master\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmRobo.resources
 C:\Users\Oldair\Downloads\Picel-Soft-master (1)\Picel-Soft-master\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmScore.resources
 C:\Users\Oldair\Downloads\Picel-Soft-master (1)\Picel-Soft-master\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.csproj.GenerateResource.Cache
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\bin\Debug\Trivia_Literaria.exe.config
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.exe
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.pdb
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\bin\Debug\Trivia_Literaria.exe
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\bin\Debug\Trivia_Literaria.pdb
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.csprojResolveAssemblyReference.cache
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmLogin.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmAgregarEquipos.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmAgregarTrivia.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmConsultarTrivia.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmControl.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmEliminarEquipo.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmEliminatoria.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmAcceso.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Properties.Resources.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmReporte.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmRobo.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmScore.resources
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.csproj.GenerateResource.Cache
+C:\Users\Oldair\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmGanadores.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\bin\Debug\Trivia_Literaria.exe.config
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.exe
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.pdb
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\bin\Debug\Trivia_Literaria.exe
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\bin\Debug\Trivia_Literaria.pdb
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.csprojResolveAssemblyReference.cache
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmGanadores.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmLogin.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmAgregarEquipos.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmAgregarTrivia.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmConsultarTrivia.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmControl.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmEliminarEquipo.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmEliminatoria.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmAcceso.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Properties.Resources.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmReporte.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmRobo.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmScore.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.csproj.GenerateResource.Cache
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmAgregarEquiposTrivia.resources
+C:\Users\Oswaldo\Downloads\FUCK_YOU_OSWA\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmPadre.resources
+C:\Users\Oswaldo\Desktop\Trivia Literaria\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.frmGanadores.resources
+C:\Users\Oswaldo\Desktop\Trivia Literaria\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmAgregarEquiposTrivia.resources
+C:\Users\Oswaldo\Desktop\Trivia Literaria\Trivia_Literaria\Trivia_Literaria\obj\Debug\Trivia_Literaria.Vista.frmPadre.resources

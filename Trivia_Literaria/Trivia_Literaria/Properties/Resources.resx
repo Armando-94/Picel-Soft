@@ -118,4 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="circulo-de-energia-naranja-sobre-un-fondo-negro_1053-596" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo-de-energia-naranja-sobre-un-fondo-negro_1053-596.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="libro mágico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\libro mágico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="12504403-cortinas-luminosas-en-el-concepto-de-teatro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\12504403-cortinas-luminosas-en-el-concepto-de-teatro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open-book-icon-free-books-and-education-13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open-book-icon-free-books-and-education-13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black-glossy-button-hi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black-glossy-button-hi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maxresdefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maxresdefault.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo_escenario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo_escenario.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo_escenario_P1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo_escenario_P1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

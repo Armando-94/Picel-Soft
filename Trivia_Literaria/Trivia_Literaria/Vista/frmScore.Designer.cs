@@ -43,9 +43,10 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(156, 245);
+            this.btnOk.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk.Location = new System.Drawing.Point(156, 236);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.Size = new System.Drawing.Size(75, 32);
             this.btnOk.TabIndex = 1;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -55,6 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Trivia_Literaria.Properties.Resources.maxresdefault;
             this.ClientSize = new System.Drawing.Size(372, 277);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.dgvScore);

@@ -30,6 +30,7 @@ namespace Trivia_Literaria.Vista
         private string[] equipos;
         public int seg,index,puntos;
         public string equi;
+        public bool bandera=true;
 
         SoundPlayer sonido = new SoundPlayer(@"Speech Off.wav");
 
@@ -44,7 +45,7 @@ namespace Trivia_Literaria.Vista
                 }
             }
             cmbEquipos.Text="Equipos";
-            lblSegundos.ForeColor = Color.Black;
+            lblSegundos.ForeColor = Color.White;
             seg = 3;
         }
 
@@ -76,21 +77,25 @@ namespace Trivia_Literaria.Vista
 
         private void tmTemporizador_Tick(object sender, EventArgs e)
         {
-            if (seg > 1)
-            {
-                lblConteoRegresivo.Text=""+seg;
-                seg--;
-                lblConteoRegresivo.Text = "" + seg;
+            if(bandera){
+                if (seg > 1)
+                {
+                    lblConteoRegresivo.Text = "" + seg;
+                    seg--;
+                    lblConteoRegresivo.Text = "" + seg;
+                }
+                else if (seg == 1)
+                {
+                    txtPregunta.Visible = true;
+                    lblEquipo.Visible = true;
+                    lblSegundos.Visible = true;
+                    lblTime.Visible = true;
+                    cmbEquipos.Visible = true;
+                    lblConteoRegresivo.Visible = false;
+                    tmTemporizador.Enabled = false;
+                }
             }
-            else if(seg==1){
-                txtPregunta.Visible = true;
-                lblEquipo.Visible = true;
-                lblSegundos.Visible = true;
-                lblTime.Visible = true;
-                cmbEquipos.Visible = true;
-                lblConteoRegresivo.Visible = false;
-                tmTemporizador.Enabled = false;
-            }else {
+            else {
                 seg++;
                 if (seg < 15)
                 {
@@ -128,6 +133,8 @@ namespace Trivia_Literaria.Vista
         private void cmbEquipos_SelectionChangeCommitted(object sender, EventArgs e)
         {
             tmTemporizador.Enabled = true;
+            seg = 0;
+            bandera = false;
             btnCorrecto.Visible = true;
             btnIncorrecto.Visible = true;
             cmbEquipos.Enabled = false;

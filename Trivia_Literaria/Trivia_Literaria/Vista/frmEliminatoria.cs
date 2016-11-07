@@ -20,7 +20,7 @@ namespace Trivia_Literaria.Vista
         }
 
         // i = Ronda actual, j = Equipo actual, p = Pregunta seleccionada, seg = segundo, indexRobo = quién robó, puntosRobo = Cuántos puntos hay involucrados (1 o -1)
-        public int i=0, j=0, p, seg=0, indexRobo, puntosRobo,permutacion=0;
+        public int i=0, j=0, p, seg=0, indexRobo, puntosRobo,empatados,scoreMaximo,rondas=10;
         
         SoundPlayer sonido = new SoundPlayer(@"Speech Off.wav");
 
@@ -64,14 +64,14 @@ namespace Trivia_Literaria.Vista
                 btnAclaracion.Visible = false;
                 objDatos.ActualizarScore(equipos[j],score[j]);
                 j++;
-                if (j < 5)
+                if (j < equipos.Length)
                 {
                     lblEquipo.Text = equipos[j];
                     lblScore.Text = "" + score[j];
                     btnCorrecto.Text = "Correcto";
                     btnCorrecto.Visible = false;
                     txtPregunta.Text = "";
-                    lblTime.ForeColor = Color.Black;
+                    lblTime.ForeColor = Color.White;
                     lblTime.Text = "0";
                     mtdActivarBotones();
                     //En caso de que esté visible, ocultamos el botón de robo
@@ -80,52 +80,67 @@ namespace Trivia_Literaria.Vista
                     }
                 }
                 else {
-                    for (int o = 0; o < 8;o++ )
-                    {
-                        preguntasOrden[o] = false;
-                    }
-                    char d = ';';
-                    string extra;
-                    string[] arr;
-                    string[] substrings;
-                    if (this.Text.Equals("Eliminatoria 1"))
-                    {
-                        equipos = objDatos.Equipos('A');
-                        score = objDatos.Score('A');
-                        arr = objDatos.Preguntas('A');
-                        for (int h = 0; h < 7; h++)
-                        {
-                            substrings = arr[h].Split(d);
-                            preguntas[h] = substrings[0];
-                            respuestas[h] = substrings[1];
-                        }
-                        extra = objDatos.Extra('A');
-                        substrings = extra.Split(d);
-                        preguntas[7] = substrings[0];
-                        respuestas[7] = substrings[1];
-                    }
-                    else
-                    {
-                        equipos = objDatos.Equipos('B');
-                        score = objDatos.Score('B');
-                        arr = objDatos.Preguntas('B');
-                        for (int h = 0; h < 7; h++)
-                        {
-                            substrings = arr[h].Split(d);
-                            preguntas[h] = substrings[0];
-                            respuestas[h] = substrings[1];
-                        }
-                        extra = objDatos.Extra('B');
-                        substrings = extra.Split(d);
-                        preguntas[7] = substrings[0];
-                        respuestas[7] = substrings[1];
-                    }
+                    i++;
                     /*Si ya acabó una vuelta (ronda) pasamos a la siguiente
                       Si la ronda es <= 9 (10 rondas) iniciamos los equipos a 0
                       Sino acabamos la trivia*/
-                    i++;
-                    if (i < 10)
+                    if (i < rondas)
                     {
+                        for (int o = 0; o < 8; o++)
+                        {
+                            preguntasOrden[o] = false;
+                        }
+                        char d = ';';
+                        string extra;
+                        string[] arr;
+                        string[] substrings;
+                        if (this.Text.Equals("Eliminatoria 1"))
+                        {
+                            equipos = objDatos.Equipos('A');
+                            score = objDatos.Score('A');
+                            arr = objDatos.Preguntas('A');
+                            for (int h = 0; h < 7; h++)
+                            {
+                                substrings = arr[h].Split(d);
+                                preguntas[h] = substrings[0];
+                                respuestas[h] = substrings[1];
+                            }
+                            extra = objDatos.Extra('A');
+                            substrings = extra.Split(d);
+                            preguntas[7] = substrings[0];
+                            respuestas[7] = substrings[1];
+                        }
+                        else if (this.Text.Equals("Eliminatoria 2"))
+                        {
+                            equipos = objDatos.Equipos('B');
+                            score = objDatos.Score('B');
+                            arr = objDatos.Preguntas('B');
+                            for (int h = 0; h < 7; h++)
+                            {
+                                substrings = arr[h].Split(d);
+                                preguntas[h] = substrings[0];
+                                respuestas[h] = substrings[1];
+                            }
+                            extra = objDatos.Extra('B');
+                            substrings = extra.Split(d);
+                            preguntas[7] = substrings[0];
+                            respuestas[7] = substrings[1];
+                        }
+                        else
+                        {
+                            arr = objDatos.Preguntas(this.Text.ElementAt(this.Text.Length - 1));
+                            for (int h = 0; h < 7; h++)
+                            {
+                                substrings = arr[h].Split(d);
+                                preguntas[h] = substrings[0];
+                                respuestas[h] = substrings[1];
+                            }
+                            extra = objDatos.Extra('B');
+                            substrings = extra.Split(d);
+                            preguntas[7] = substrings[0];
+                            respuestas[7] = substrings[1];
+                        }
+                        MessageBox.Show("Ronda " + (i+1));
                         j = 0;
                         mtdVerBotones();
                         mtdActivarBotones();
@@ -133,14 +148,14 @@ namespace Trivia_Literaria.Vista
                         lblScore.Text = "" + score[j];
                         btnCorrecto.Text = "Correcto";
                         btnCorrecto.Visible = false;
-                        lblTime.ForeColor = Color.Black;
+                        lblTime.ForeColor = Color.White;
                         if (btnRobo.Visible)
                         {
                             btnRobo.Visible = false;
                         }
                         txtPregunta.Text = "";
                         lblTime.Text = "0";
-                        if(i==3){
+                        if(i==3 | i==6 | i==8){
                             Vista.frmScore objS = new frmScore(equipos, score);
                             this.Hide();
                             objS.ShowDialog();
@@ -149,7 +164,36 @@ namespace Trivia_Literaria.Vista
                     }
                     else
                     {
-                        mtdFinTrivia();
+                        if (mtdVerificarGanador())
+                        {
+                            mtdFinTrivia();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Empate... Muerte Súbita");
+                            if (this.Text.Equals("Eliminatoria 1"))
+                            {
+                                this.Text = "Muerte Súbita A";
+                            }
+                            else
+                            {
+                                this.Text = "Muerte Súbita B";
+                            }
+                            mtdArmarMuerteSubita();
+                            rondas = 5;
+                            i = 0;
+                            j = 0;
+                            mtdVerBotones();
+                            mtdActivarBotones();
+                            lblEquipo.Text = equipos[j];
+                            lblScore.Text = "" + score[j];
+                            btnCorrecto.Text = "Correcto";
+                            btnCorrecto.Visible = false;
+                            lblTime.ForeColor = Color.White;
+                            txtPregunta.Text = "";
+                            lblTime.Text = "0";
+                            btnAclaracion.Visible = false;
+                        }
                     }
                 }
             }
@@ -421,11 +465,19 @@ namespace Trivia_Literaria.Vista
         #region Método que nos mostrará quién ganó y finalizará la trivia
         private void mtdFinTrivia()
         {
-            Vista.frmScore objS = new frmScore(equipos, score);
+            int max = 0,aux=0;
+            for (int o = 0; o < equipos.Length; o++)
+            {
+                if (score[o] > max)
+                {
+                    max = score[o];
+                    aux = o;
+                }
+            }
+            frmGanadores objG = new frmGanadores(equipos[aux]);
             this.Hide();
-            objS.ShowDialog();
-            this.Show();
-            mtdDesactivarBotones();
+            objG.ShowDialog();
+            this.Close();
         }
         #endregion
 
@@ -537,14 +589,14 @@ namespace Trivia_Literaria.Vista
                   modificamos lo que dice el botón, lo ocultamos, borramos el textbox
                   y regresamos el tiempo (label) a 0*/
             j++;
-            if (j < 5)
+            if (j < equipos.Length)
             {
                 lblEquipo.Text = equipos[j];
                 lblScore.Text = "" + score[j];
                 btnCorrecto.Text = "Correcto";
                 btnCorrecto.Visible = false;
                 txtPregunta.Text = "";
-                lblTime.ForeColor = Color.Black;
+                lblTime.ForeColor = Color.White;
                 lblTime.Text = "0";
                 mtdActivarBotones();
                 //En caso de que esté visible, ocultamos el botón de robo
@@ -556,52 +608,67 @@ namespace Trivia_Literaria.Vista
             }
             else
             {
-                for (int o = 0; o < 8; o++)
-                {
-                    preguntasOrden[o] = false;
-                }
-                char d = ';';
-                string extra;
-                string[] arr;
-                string[] substrings;
-                if (this.Text.Equals("Eliminatoria 1"))
-                {
-                    equipos = objDatos.Equipos('A');
-                    score = objDatos.Score('A');
-                    arr = objDatos.Preguntas('A');
-                    for (int h = 0; h < 7; h++)
-                    {
-                        substrings = arr[h].Split(d);
-                        preguntas[h] = substrings[0];
-                        respuestas[h] = substrings[1];
-                    }
-                    extra = objDatos.Extra('A');
-                    substrings = extra.Split(d);
-                    preguntas[7] = substrings[0];
-                    respuestas[7] = substrings[1];
-                }
-                else
-                {
-                    equipos = objDatos.Equipos('B');
-                    score = objDatos.Score('B');
-                    arr = objDatos.Preguntas('B');
-                    for (int h = 0; h < 7; h++)
-                    {
-                        substrings = arr[h].Split(d);
-                        preguntas[h] = substrings[0];
-                        respuestas[h] = substrings[1];
-                    }
-                    extra = objDatos.Extra('B');
-                    substrings = extra.Split(d);
-                    preguntas[7] = substrings[0];
-                    respuestas[7] = substrings[1];
-                }
                 /*Si ya acabó una vuelta (ronda) pasamos a la siguiente
                   Si la ronda es <= 9 (10 rondas) iniciamos los equipos a 0
                   Sino acabamos la trivia*/
                 i++;
-                if (i < 10)
+                if (i < rondas)
                 {
+                    for (int o = 0; o < 8; o++)
+                    {
+                        preguntasOrden[o] = false;
+                    }
+                    char d = ';';
+                    string extra;
+                    string[] arr;
+                    string[] substrings;
+                    if (this.Text.Equals("Eliminatoria 1"))
+                    {
+                        equipos = objDatos.Equipos('A');
+                        score = objDatos.Score('A');
+                        arr = objDatos.Preguntas('A');
+                        for (int h = 0; h < 7; h++)
+                        {
+                            substrings = arr[h].Split(d);
+                            preguntas[h] = substrings[0];
+                            respuestas[h] = substrings[1];
+                        }
+                        extra = objDatos.Extra('A');
+                        substrings = extra.Split(d);
+                        preguntas[7] = substrings[0];
+                        respuestas[7] = substrings[1];
+                    }
+                    else if (this.Text.Equals("Eliminatoria 2"))
+                    {
+                        equipos = objDatos.Equipos('B');
+                        score = objDatos.Score('B');
+                        arr = objDatos.Preguntas('B');
+                        for (int h = 0; h < 7; h++)
+                        {
+                            substrings = arr[h].Split(d);
+                            preguntas[h] = substrings[0];
+                            respuestas[h] = substrings[1];
+                        }
+                        extra = objDatos.Extra('B');
+                        substrings = extra.Split(d);
+                        preguntas[7] = substrings[0];
+                        respuestas[7] = substrings[1];
+                    }
+                    else
+                    {
+                        arr = objDatos.Preguntas(this.Text.ElementAt(this.Text.Length - 1));
+                        for (int h = 0; h < 7; h++)
+                        {
+                            substrings = arr[h].Split(d);
+                            preguntas[h] = substrings[0];
+                            respuestas[h] = substrings[1];
+                        }
+                        extra = objDatos.Extra('B');
+                        substrings = extra.Split(d);
+                        preguntas[7] = substrings[0];
+                        respuestas[7] = substrings[1];
+                    }
+                    MessageBox.Show("Ronda " + (i+1));
                     j = 0;
                     mtdVerBotones();
                     mtdActivarBotones();
@@ -609,11 +676,11 @@ namespace Trivia_Literaria.Vista
                     lblScore.Text = "" + score[j];
                     btnCorrecto.Text = "Correcto";
                     btnCorrecto.Visible = false;
-                    lblTime.ForeColor = Color.Black;
+                    lblTime.ForeColor = Color.White;
                     txtPregunta.Text = "";
                     lblTime.Text = "0";
                     btnAclaracion.Visible = false;
-                    if (i == 3)
+                    if (i == 3 | i == 6 | i == 8)
                     {
                         Vista.frmScore objS = new frmScore(equipos, score);
                         this.Hide();
@@ -623,9 +690,75 @@ namespace Trivia_Literaria.Vista
                 }
                 else
                 {
-                    mtdFinTrivia();
+                    if (mtdVerificarGanador())
+                    {
+                        mtdFinTrivia();
+                    }
+                    else {
+                        MessageBox.Show("Empate... Muerte Súbita");
+                        if (this.Text.Equals("Eliminatoria 1"))
+                        {
+                            this.Text = "Muerte Súbita A";
+                        }
+                        else {
+                            this.Text = "Muerte Súbita B";
+                        }
+                        mtdArmarMuerteSubita();
+                        rondas = 5;
+                        i = 0;
+                        j = 0;
+                        mtdVerBotones();
+                        mtdActivarBotones();
+                        lblEquipo.Text = equipos[j];
+                        lblScore.Text = "" + score[j];
+                        btnCorrecto.Text = "Correcto";
+                        btnCorrecto.Visible = false;
+                        lblTime.ForeColor = Color.White;
+                        txtPregunta.Text = "";
+                        lblTime.Text = "0";
+                        btnAclaracion.Visible = false;
+                    }
                 }
             }
+        }
+
+        private void mtdArmarMuerteSubita() {
+            int aux = 0;
+            int[]sc=new int[equipos.Length];
+            string[] eq=new string[equipos.Length];
+            for(int o=0;o<equipos.Length;o++){
+                sc[o]=score[o];
+                eq[o]=equipos[o];
+            }
+            equipos = new string[empatados];
+            score = new int[empatados];
+            for (int o = 0; o < eq.Length;o++ )
+            {
+                if(sc[o]==scoreMaximo){
+                    equipos[aux] = eq[o];
+                    score[aux] = sc[o];
+                    aux++;
+                }
+            }
+        }
+
+        private bool mtdVerificarGanador(){
+            int max=0,cant=0;
+            for (int o = 0; o < equipos.Length;o++ )
+            {
+                if(score[o]>max){
+                    max = score[o];
+                }
+            }
+            for (int o = 0; o < equipos.Length; o++)
+            {
+                if(score[o]==max){
+                    cant++;
+                }
+            }
+            empatados = cant;
+            scoreMaximo = max;
+            return (cant==1);
         }
 
         private void btnAclaracion_Click(object sender, EventArgs e)
